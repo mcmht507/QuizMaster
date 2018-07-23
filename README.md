@@ -71,7 +71,7 @@ After registering or logging in, you can solve the quiz.
 `http://localhost:8081/quiz`
 
 ## TODO
-* Add back-end error test case
+* Add back-end error test case and more test case
 * Add Front-end test case
 * Use TypeScript
 * Add UX improvement function. ex) ranking,
