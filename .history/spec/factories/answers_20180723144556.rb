@@ -1,0 +1,8 @@
+FactoryBot.define do
+  factory :answer do
+    answer_id 100
+    question_id 1
+    user_id "test_admin"
+    content "test_answer"
+  end
+end
