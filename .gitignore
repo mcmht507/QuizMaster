@@ -26,3 +26,5 @@
 /config/master.key
 # history file
 .history
+# vscode file
+.vscode
