@@ -1,5 +1,0 @@
-class QuestionSerializer < ActiveModel::Serializer
-  attributes :question_id, :user_id, :content, :category_id,:answer_id
-  # has_many :answers
-  # belongs_to :category
-end
