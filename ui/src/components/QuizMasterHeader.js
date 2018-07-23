@@ -10,7 +10,6 @@ const login_check = ()=>{
   let pathName = location.pathname;
   let token = localStorage.getItem('access_token');
   if (!token && acceptPathName.indexOf(pathName) === -1) {
-    console.log("aaaaaaaaaaaa");
     window.location.href = "/";
   }
 }
@@ -34,7 +33,7 @@ const admin_check = (role_type) => {
     auth: state.user.result,
     role_type: state.user.login_user && state.user.login_user.role_type
       ? state.user.login_user.role_type
-      : "public",
+      : null,
     result: state.user.result
   }),
   { load }
