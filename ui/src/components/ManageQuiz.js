@@ -36,7 +36,6 @@ export default class ManageQuiz extends React.Component {
 
   render() {
     const { login_user } = this.props
-    console.log(login_user);
     if (login_user && login_user.result === false) {
       this.props.history.push("/")
     }
