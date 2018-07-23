@@ -70,6 +70,16 @@ After registering or logging in, you can solve the quiz.
 
 `http://localhost:8081/quiz`
 
+## How to Test
+
+Api test start.
+
+`rails db:migrate RAILS_ENV=test`
+
+`rake db:seed RAILS_ENV=test`
+
+`bundle exec rspec spec`
+
 ## TODO
 * Add back-end error test case and more test case
 * Add Front-end test case
