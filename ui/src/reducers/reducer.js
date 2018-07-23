@@ -8,7 +8,7 @@ import category from './category'
 
 export default combineReducers({
   routing: routerReducer,
-  form: formReducer, // 追加
+  form: formReducer,
   user,
   question,
   category

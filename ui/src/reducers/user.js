@@ -17,8 +17,6 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 export function load() {
-  // clientはaxiosの付与したクライアントパラメータ
-  // 非同期処理をPromise形式で記述できる
   return (dispatch, getState, client) => {
     return client
       .get('http://localhost:3000/users/myself')

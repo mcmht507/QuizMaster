@@ -17,7 +17,6 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 export function load() {
-  console.log("question");
   return (dispatch, getState, client) => {
     return client
       .get('http://localhost:3000/categories')
