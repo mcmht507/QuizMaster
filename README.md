@@ -23,6 +23,8 @@ The configuration of this system is that API is Rails, UI is react / redux.
 
 `cd QuizMaster`
 
+`gem install bundler`
+
 `bundle install`
 
 `rails db:migrate RAILS_ENV=development`
