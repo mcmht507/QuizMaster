@@ -65,7 +65,7 @@ export default class RegistrationUser extends React.Component {
       .then((res) => {
         let user = res.data;
         localStorage.setItem('access_token', user.access_token);
-        this.handlePageMove(user.role_type === 'admin' ? '/manage' : '/quiz');
+        window.location.href = (user.role_type === 'admin' ? '/manage' : '/quiz');
       })
       .catch((err) => {
         console.log(err);
