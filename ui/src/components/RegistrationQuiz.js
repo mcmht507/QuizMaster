@@ -27,11 +27,9 @@ const FormTextField = ({
   validate: values => {
     const errors = {}
     if (!values.category) {
-      console.log("err category");
       errors.category = requiredErrMsg.replace("{0}", "Category")
     }
     if (!values.answer) {
-      console.log("err answer");
       errors.answer = requiredErrMsg.replace("{0}", "Answer")
     }
     return errors
@@ -82,10 +80,8 @@ export default class RegistrationQuiz extends React.Component {
 
   sendItems(values) {
     // question check
-    console.log("sousin");
     let questionContent = this.state.question_content;
     if (!questionContent) {
-      console.log("input check question");
       this.setState({ question_label :requiredErrMsg.replace("{0}", "Question")})
       return;
     }
@@ -94,13 +90,10 @@ export default class RegistrationQuiz extends React.Component {
       content: questionContent,
       answer: values.answer
     }
-    console.log("question");
-    console.log(question);
     // register
     client.post("http://localhost:3000/questions", { question: question })
       .then((res) => {
         let result = res.data;
-        console.log(result);
         this.handlePageMove('/manage');
       })
       .catch((err) => {
