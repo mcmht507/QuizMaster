@@ -22,8 +22,9 @@ export default class QuestionsList extends React.Component {
       history: this.props.history
     }
   }
-  handlePageMove(params) {
-    this.props.history.push(params)
+
+  editQuestion(pathname) {
+    window.location.href = pathname
   }
 
   componentDidMount() {
@@ -51,9 +52,7 @@ export default class QuestionsList extends React.Component {
           let category_content = question.category_content
             ? question.category_content
             : "";
-          let params = {
-            pathname: '/editQuiz/' + question_id,
-          }
+          let pathname = '/editQuiz/' + question_id
           return (
             <Card key={question_id} style={{ marginTop: '15px' }}>
               <CardContent style={{ color: '#408040' }}>
@@ -65,7 +64,7 @@ export default class QuestionsList extends React.Component {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" color="primary" onClick={() => this.handlePageMove(params)}>
+                <Button size="small" color="primary" onClick={() => this.editQuestion(pathname)}>
                   Edit
                 </Button>
                 <Button size="small" color="primary" onClick={() => this.deleteQuestion(question_id)}>
