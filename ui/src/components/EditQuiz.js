@@ -20,7 +20,6 @@ const FormTextField = ({
     <TextField style={{ margin: 5, width: '90%' }} error={isError} label={label} helperText={isError ? error : null} {...input} type={type} />
   )
 }
-
 @reduxForm({
   form: 'syncValidation',
   enableReinitialize: true,
@@ -99,8 +98,6 @@ export default class EditQuiz extends React.Component {
     let questionContent = this.state.question_content !== null
       ? this.state.question_content
       : values.questionContent
-    console.log(`this.state.question_content:${this.state.question_content}`);
-    console.log(questionContent);
     if (!questionContent) {
       this.setState({ question_label: requiredErrMsg.replace("{0}", "Question") })
       return;
