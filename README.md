@@ -43,7 +43,7 @@ docserver's path
 
 `yarn install`
 
-`yarn run dev`
+`yarn run start`
 
 ## Usage
 
