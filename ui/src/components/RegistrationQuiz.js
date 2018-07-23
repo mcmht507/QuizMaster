@@ -24,6 +24,7 @@ const FormTextField = ({
 @reduxForm({
   form: 'syncValidation',
   enableReinitialize: true,
+  initialValues: { category: 1 },
   validate: values => {
     const errors = {}
     if (!values.category) {
